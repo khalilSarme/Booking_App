@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Georgia, Sans-Serif;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}
+
+::selection {
+  color: gold;
+  background-color: purple;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+a {
+  color: #0088cc;
+}
+
+body {
+  background-color: #efefef;
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto minmax(100vh, auto) 1fr;
+  gap: 1px;
+}
+
+.header,
+.main,
+.wrapper {
+  position: relative;
+  background-color: #fefefe;
+}
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 0 #c1c1c1;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 737px;
+  }
+  .header > .container,
+  .main > .container {
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 738px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.header .navbar_brand {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #112233;
+  font-size: calc(100% + 24px);
+}
+
+.navbar_brand i {
+  color: #0088cc;
+  font-size: calc(100% + 14px);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#008f5f, purple) no-repeat;
+}
+
+.main {
+  padding: 1.5rem 1rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+h1.heading {
+  font-size: calc(100% + 34px);
+  font-weight: bold;
+}
+
+h2.heading {
+  font-size: calc(100% + 14px);
+  font-weight: 800;
+}
+
+h3.heading {
+  font-size: calc(100% + 10px);
+  font-weight: 700;
+}
+
+.booking_box {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f4f5;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+.group {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1169px) {
+  .group {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(300px, auto));
+    grid-template-areas: 'room' 'wedding' 'cafeteria';
+  }
+}
+
+@media (min-width: 1170px) {
+  .group {
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 'room wedding' 'room wedding' 'room cafeteria' 'room cafeteria';
+  }
+  .room {
+    min-height: 500px;
+  }
+}
+
+.room {
+  grid-area: room;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+.wedding {
+  grid-area: wedding;
+}
+
+.cafeteria {
+  grid-area: cafeteria;
+}
+
+input {
+  background-color: #ececec;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+small {
+  color: #112233;
+  font-size: calc(100% - 5px);
+}
+
+.roomRegisterForm {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  gap: 1rem;
+}
+
+.roomRegisterForm .collection {
+  display: grid;
+  gap: 5px;
+}
+
+.roomRegisterForm button {
+  background-color: #112233;
+  border-radius: 10px;
+  color: #f5f4f5;
+  font-size: calc(100%);
+  font-weight: 800;
+  padding: 10px;
+}
+
+label {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+input:focus,
+button:hover {
+  box-shadow: 0 0 0 1px #151515;
+}
