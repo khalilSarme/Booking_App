@@ -27,7 +27,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto minmax(400px,auto) 1fr;
+  grid-template-rows: auto minmax(400px, auto) 1fr;
   gap: 1px;
 }
 
@@ -63,8 +63,9 @@ body {
   .container {
     max-width: 737px;
   }
-  .header > .container,
-  .main > .container {
+
+  .header>.container,
+  .main>.container {
     padding: 0 !important;
   }
 }
@@ -152,6 +153,7 @@ h3.heading {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 'room wedding' 'room wedding' 'room cafeteria' 'room cafeteria';
   }
+
   .room {
     min-height: 500px;
   }
@@ -206,7 +208,7 @@ small {
 }
 
 label {
-    font-size: calc(100% + 4px);
+  font-size: calc(100% + 4px);
   font-weight: 700;
   letter-spacing: 1px;
 }
