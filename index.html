@@ -21,8 +21,6 @@
     <div class="header">
       <div class="container">
         <a
-          data-aos="fade-left"
-          data-aos-duration="1000"
           class="navbar_brand">
           <i>S</i>KY <i>N</i>EAR
         </a>
@@ -30,9 +28,7 @@
     </div>
 
     <div
-      class="wrapper"
-      data-aos="fade-up"
-      data-aos-duration="1500">
+      class="wrapper">
       <div class="box booking_box">
         <h1 class="heading">Booking System</h1>
       </div>
@@ -81,10 +77,21 @@
                   name="phoneNumbr"
                   id="phoneNumbr" />
               </div>
+              <div class="collection">
+                  <label for="persons">Person (s)</label>
+                  <input 
+                    type="text"
+                    name="persons"
+                    id="persons">
+              </div>
+              <div class="collection">
+                  <label for="days">Days</label>
+                  <input type="text" name="days" id="days" value="" />
+              </div>
               <button type="button">Book Room</button>
             </form>
           </div>
-
+          
           <div class="box wedding">
             <h3 class="heading">Wedding Hall</h3>
             <form
@@ -101,7 +108,8 @@
         </div>
       </div>
     </div>
-
+    
+    
     <script
       src="aos-master/dist/aos.js"
       type="text/javascript"

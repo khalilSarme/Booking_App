@@ -161,7 +161,7 @@ h3.heading {
   grid-area: room;
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .wedding {
@@ -173,10 +173,11 @@ h3.heading {
 }
 
 input {
-  background-color: #ececec;
-  padding: 10px;
+  background-color: #ECECEC;
+  padding: 10px 5px;
   border-radius: 10px;
-  font-weight: 400;
+  font-weight: 900;
+  font-size: calc(100% + 2px);
 }
 
 small {
@@ -187,12 +188,12 @@ small {
 .roomRegisterForm {
   display: grid;
   grid-template-rows: repeat(6, auto);
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .roomRegisterForm .collection {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 
 .roomRegisterForm button {
@@ -201,10 +202,11 @@ small {
   color: #f5f4f5;
   font-size: calc(100%);
   font-weight: 800;
-  padding: 10px;
+  padding: 15px;
 }
 
 label {
+    font-size: calc(100% + 4px);
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -213,3 +215,4 @@ input:focus,
 button:hover {
   box-shadow: 0 0 0 1px #151515;
 }
+
