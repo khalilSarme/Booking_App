@@ -27,7 +27,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto minmax(100vh, auto) 1fr;
+  grid-template-rows: auto minmax(400px,auto) 1fr;
   gap: 1px;
 }
 
@@ -174,7 +174,7 @@ h3.heading {
 
 input {
   background-color: #ECECEC;
-  padding: 10px 5px;
+  padding: 0.8rem;
   border-radius: 10px;
   font-weight: 900;
   font-size: calc(100% + 2px);
@@ -215,4 +215,3 @@ input:focus,
 button:hover {
   box-shadow: 0 0 0 1px #151515;
 }
-
