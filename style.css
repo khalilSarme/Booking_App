@@ -23,11 +23,11 @@ a {
 }
 
 body {
-  background-color: #efefef;
+  background-color: #ffffff;
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto minmax(400px, auto) 1fr;
+  grid-template-rows: auto minmax(600px, auto) 1fr;
   gap: 1px;
 }
 
@@ -35,7 +35,7 @@ body {
 .main,
 .wrapper {
   position: relative;
-  background-color: #fefefe;
+  background-color: #ffffff;
 }
 
 .header {
@@ -55,8 +55,8 @@ body {
 .box {
   padding: 1rem;
   border-radius: 20px;
-  box-shadow: 0 0 15px 0 #c1c1c1;
   position: relative;
+  background-color: #dfdfdf;
 }
 
 @media (max-width: 767px) {
@@ -64,8 +64,8 @@ body {
     max-width: 737px;
   }
 
-  .header>.container,
-  .main>.container {
+  .header > .container,
+  .main > .container {
     padding: 0 !important;
   }
 }
@@ -99,7 +99,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#008f5f, purple) no-repeat;
+  background: linear-gradient(rgb(179, 9, 43), #5e1375) no-repeat;
 }
 
 .main {
@@ -132,6 +132,7 @@ h3.heading {
   align-items: center;
   color: #f5f4f5;
   box-shadow: 0 0 0 0 transparent !important;
+  background-color: transparent !important;
 }
 
 .group {
@@ -149,7 +150,7 @@ h3.heading {
 
 @media (min-width: 1170px) {
   .group {
-    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-columns: minmax(350px, auto) 1fr;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 'room wedding' 'room wedding' 'room cafeteria' 'room cafeteria';
   }
@@ -175,11 +176,12 @@ h3.heading {
 }
 
 input {
-  background-color: #ECECEC;
   padding: 0.8rem;
-  border-radius: 10px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: calc(100% + 2px);
+  /*border: 2px solid #691970;*/
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 small {
@@ -199,21 +201,21 @@ small {
 }
 
 .roomRegisterForm button {
-  background-color: #112233;
+  background-color: #5e1375;
   border-radius: 10px;
   color: #f5f4f5;
-  font-size: calc(100%);
-  font-weight: 800;
+  font-size: calc(100% + 5px);
+  font-weight: 600;
   padding: 15px;
+  transition: box-shadow .3s ease-in-out;
 }
 
 label {
   font-size: calc(100% + 4px);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
-input:focus,
 button:hover {
-  box-shadow: 0 0 0 1px #151515;
+    box-shadow: 0 0 0 .2rem #8800cc88;
 }
