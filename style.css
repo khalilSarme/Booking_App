@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Georgia, Sans-Serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   outline: 0;
   border: 0;
@@ -18,204 +18,133 @@
   background-color: transparent;
 }
 
-a {
-  color: #0088cc;
-}
-
 body {
-  background-color: #ffffff;
+  background-color: #d7d6d7;
   width: 100vw;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto minmax(600px, auto) 1fr;
-  gap: 1px;
-}
-
-.header,
-.main,
-.wrapper {
   position: relative;
-  background-color: #ffffff;
 }
+/*framework Start*/
 
-.header {
+.component {
+  background-color: #f5fcff;
+  position: relative;
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  overflow-x: hidden;
 }
 
 .container {
   margin: auto;
   width: 100%;
-  padding: 0 15px;
-  position: relative;
+  background-color: transparent;
+  padding: 0 1rem;
 }
 
-.box {
-  padding: 1rem;
-  border-radius: 20px;
-  position: relative;
-  background-color: #dfdfdf;
+/*framework End*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_brand {
+  display: block;
+  text-align: center;
+  font-size: calc(100% + 2vw);
+  font-weight: 800;
+  color: #0f0f0f !important;
+}
+
+.navbar_brand i {
+  color: #0080af;
+}
+
+.wrapper {
+  min-height: 100vmax;
+  background-color: #1f223f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .container_fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper .wrapper_text {
+  /*color: #EFEFEF;*/
+  font-size: calc(100% + 10vw);
+}
+
+.wrapper small {
+  display: block;
+  font-size: calc(100% + 2vw);
+  line-height: 2;
+  margin: 3vh 0 3.5vh;
+  /*color: #EFEFEF;*/
+}
+
+.wrapper .book_btn {
+  padding: 1.2vh 1rem;
+  border-radius: 5vh;
+  background-color: #0080af;
+  color: #ffffff;
+  font-size: calc(100% + 2vw);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
 }
 
 @media (max-width: 767px) {
   .container {
-    max-width: 737px;
-  }
-
-  .header > .container,
-  .main > .container {
+    max-width: calc(767px - 2rem);
     padding: 0 !important;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 738px;
+    max-width: calc(768px - 2rem);
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
+.presentation {
+  padding: 0;
+  background: linear-gradient(#64e9ff, #103ce7);
 }
 
-.header .navbar_brand {
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  color: #112233;
-  font-size: calc(100% + 24px);
-}
-
-.navbar_brand i {
-  color: #0088cc;
-  font-size: calc(100% + 14px);
-}
-
-.wrapper {
+.presentation .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgb(179, 9, 43), #5e1375) no-repeat;
 }
 
-.main {
-  padding: 1.5rem 1rem;
+.presentation .box {
+  min-height: 300px;
+  padding: 1rem;
 }
 
-.heading {
-  text-align: center;
+.presentation .wrapper_text {
+  font-size: calc(100% + 0.5vh);
 }
 
-h1.heading {
-  font-size: calc(100% + 34px);
-  font-weight: bold;
-}
-
-h2.heading {
-  font-size: calc(100% + 14px);
-  font-weight: 800;
-}
-
-h3.heading {
-  font-size: calc(100% + 10px);
-  font-weight: 700;
-}
-
-.booking_box {
-  min-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f5f4f5;
-  box-shadow: 0 0 0 0 transparent !important;
-  background-color: transparent !important;
-}
-
-.group {
-  display: grid;
-  gap: 1.5rem;
-}
-
-@media (max-width: 1169px) {
-  .group {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, minmax(300px, auto));
-    grid-template-areas: 'room' 'wedding' 'cafeteria';
+@media (max-width: 1170px) {
+  .presentation .container {
+    flex-flow: column wrap;
+  }
+  .presentation .box {
+    flex: 1 0 auto;
   }
 }
 
-@media (min-width: 1170px) {
-  .group {
-    grid-template-columns: minmax(350px, auto) 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 'room wedding' 'room wedding' 'room cafeteria' 'room cafeteria';
+@media (min-width: 1171px) {
+  .presentation .container {
+    flex-flow: row wrap;
   }
-
-  .room {
-    min-height: 500px;
+  .presentation .box {
+    flex: 1 0 33.333333%;
   }
-}
-
-.room {
-  grid-area: room;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 2rem;
-}
-
-.wedding {
-  grid-area: wedding;
-}
-
-.cafeteria {
-  grid-area: cafeteria;
-}
-
-input {
-  padding: 0.8rem;
-  font-weight: 700;
-  font-size: calc(100% + 2px);
-  /*border: 2px solid #691970;*/
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-small {
-  color: #112233;
-  font-size: calc(100% - 5px);
-}
-
-.roomRegisterForm {
-  display: grid;
-  grid-template-rows: repeat(6, auto);
-  gap: 2rem;
-}
-
-.roomRegisterForm .collection {
-  display: grid;
-  gap: 10px;
-}
-
-.roomRegisterForm button {
-  background-color: #5e1375;
-  border-radius: 10px;
-  color: #f5f4f5;
-  font-size: calc(100% + 5px);
-  font-weight: 600;
-  padding: 15px;
-  transition: box-shadow .3s ease-in-out;
-}
-
-label {
-  font-size: calc(100% + 4px);
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-button:hover {
-    box-shadow: 0 0 0 .2rem #8800cc88;
 }
