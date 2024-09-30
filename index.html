@@ -1,69 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>SKY NEAR Hotel</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="aos-master/dist/aos.css"
-      type="text/css"
-      media="all" />
+    rel="stylesheet"
+    href="aos-master/dist/aos.css"
+    type="text/css"
+    media="all" />
     <link
-      rel="stylesheet"
-      href="style.css"
-      type="text/css"
-      media="all" />
-  </head>
-  <body>
+    rel="stylesheet"
+    href="style.css"
+    type="text/css"
+    media="all" />
+</head>
+<body>
     <div class="component header">
-      <a
-        class="navbar_brand"
-        href="#">
-        <i>S</i>KY <i>N</i>EAR
-      </a>
+        <a
+            class="navbar_brand"
+            href="#">
+            <i>S</i>KY <i>N</i>EAR
+        </a>
     </div>
 
     <div class="component wrapper">
-      <div class="container_fluid">
-        <h1 class="wrapper_text">Booking System</h1>
-        <small>Room | Wedding Hall | Cafeteria</small>
-        <button
-          class="book_btn"
-          type="button">
-          Book now
-        </button>
-      </div>
+        <div class="container_fluid">
+            <h1 class="wrapper_text">Booking System</h1>
+            <small>Room | Wedding Hall | Cafeteria</small>
+            <button
+                class="btn book_btn"
+                type="button">
+                <span>Book Now</span>
+            </button>
+        </div>
     </div>
 
-    <div class="component presentation">
-      <div class="container">
-        <div class="box room_box">
-          <h2 class="wrapper_text">Room</h2>
-        </div>
 
-        <div class="box wedding_box">
-          <h2 class="wrapper_text">Wedding Hall</h2>
-        </div>
-
-        <div class="box cafeteria_box">
-          <h2 class="wrapper_text">Cafeteria</h2>
-        </div>
-      </div>
-    </div>
-    <!--
-            <div class="component content">
-
+    <div class="component booking_box">
+        <div class="options">
+            <div class="option">
+                <label for="room">Room</label>
+                <input type="checkbox" name="room" id="room" value="" />
             </div>
+            <div class="option">
+                <label for="wedding">Wedding Hall</label>
+                <input type="checkbox" name="wedding" id="wedding" value="" />
+            </div>
+            <div class="option">
+                <label for="cafeteria">Cafeteria</label>
+                <input type="checkbox" name="cafeteria" id="cafeteria" value="" />
+            </div>
+        </div>
+        <div class="btns">
+            <button class="btn next_btn" type="button" disabled="disabled">
+                <span>Next</span>
+            </button>
+            <button class="btn cancel_btn" type="button">
+                <span>Go Back</span>
+            </button>
+        </div>
+    </div>
 
-        -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script
-      src="aos-master/dist/aos.js"
-      type="text/javascript"
-      charset="utf-8"></script>
+        src="aos-master/dist/aos.js"
+        type="text/javascript"
+        charset="utf-8"></script>
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
